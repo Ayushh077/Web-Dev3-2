@@ -2,14 +2,14 @@ const express = require("express");
 const router = express.Router();
 let students = require("../data/students");
 
-let nextId = 4; // next id to give a new student (we already have 1,2,3)
+let nextId = 4; 
 
-// GET /students - get all students
+
 router.get("/", function (req, res) {
   res.status(200).json(students);
 });
 
-// GET /students/:id - get one student by id
+
 router.get("/:id", function (req, res) {
   const id = parseInt(req.params.id);
   const student = students.find(function (s) {
@@ -23,7 +23,7 @@ router.get("/:id", function (req, res) {
   res.status(200).json(student);
 });
 
-// POST /students - add a new student
+
 router.post("/", function (req, res) {
   const name = req.body.name;
   const course = req.body.course;
@@ -44,7 +44,7 @@ router.post("/", function (req, res) {
   res.status(201).json(newStudent);
 });
 
-// PUT /students/:id - update a student
+
 router.put("/:id", function (req, res) {
   const id = parseInt(req.params.id);
   const student = students.find(function (s) {
@@ -65,7 +65,6 @@ router.put("/:id", function (req, res) {
   res.status(200).json(student);
 });
 
-// DELETE /students/:id - delete a student
 router.delete("/:id", function (req, res) {
   const id = parseInt(req.params.id);
   const index = students.findIndex(function (s) {
