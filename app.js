@@ -5,7 +5,7 @@ const studentRoutes = require("./routes/studentRoutes");
 const app = express();
 const PORT = 3000;
 
-app.use(express.json()); // lets us read JSON from the request body
+app.use(express.json()); 
 app.use(logger); // our custom logger runs for every request
 
 app.use("/students", studentRoutes);
