@@ -23,7 +23,6 @@ router.get("/:id", function (req, res) {
   res.status(200).json(student);
 });
 
-
 router.post("/", function (req, res) {
   const name = req.body.name;
   const course = req.body.course;
