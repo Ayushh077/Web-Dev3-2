@@ -1,5 +1,4 @@
-// Custom Logger Middleware
-// This function runs on EVERY request and just prints info to the console
+
 
 function logger(req, res, next) {
   const currentTime = new Date().toLocaleString();
