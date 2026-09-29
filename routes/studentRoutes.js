@@ -9,7 +9,6 @@ router.get("/", function (req, res) {
   res.status(200).json(students);
 });
 
-
 router.get("/:id", function (req, res) {
   const id = parseInt(req.params.id);
   const student = students.find(function (s) {
@@ -62,7 +61,6 @@ router.put("/:id", function (req, res) {
 
   res.status(200).json(student);
 });
-
 router.delete("/:id", function (req, res) {
   const id = parseInt(req.params.id);
   const index = students.findIndex(function (s) {
