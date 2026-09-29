@@ -1,9 +1,7 @@
-
-
 function logger(req, res, next) {
   const currentTime = new Date().toLocaleString();
   console.log(currentTime + " - " + req.method + " request to " + req.url);
-  next(); // don't forget this! it lets the request move to the next step
+  next(); 
 }
 
 module.exports = logger;
